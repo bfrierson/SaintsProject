@@ -1,23 +1,60 @@
 <!doctype html>
 <html>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	
-		<head>
-			<title>Statistics Page</title>
-			<button type="button" class="btn btn-warning btn-lg"><a href="index.html">Home</a></button>
-			<button type="button" class="btn btn-warning btn-lg"><a href="stats.html">Statistics</a></button>
-			<button type="button" class="btn btn-warning btn-lg"><a href="schedule.html">Schedule</a></button>
-			<button type="button" class="btn btn-warning btn-lg"><a href="hof.html">Hall of Fame</a></button>
-		</head>
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<title>Statistics Page</title>
+	</head>
 		<body>
-			<table class="table-hover table-bordered">
+			<header class="navbar-inverse" role="banner">
+			<div class="container">
+				<nav role="navigation">
+					<div class="container-fluid">
+					  <!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						  <a class="navbar-brand" href="index.html">Saints Information Page</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="stats.html">Stats</a></li>
+								<li><a href="schedule.html">Schedule</a></li>
+								<li><a href="hof.html">Hall of Fame</a></li>
+							</ul>
+						  <form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+							  <input type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-default">Submit</button>
+						  </form>
+						  <ul class="nav navbar-nav navbar-right">
+							<li><a href="#">Link</a></li>
+							<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Saints Links<span class="caret"></span></a>
+							  <ul class="dropdown-menu" role="menu">
+								<li><a href="http://www.neworleanssaints.com">New Orleans Saints Home Page</a></li>
+								<li><a href="http://www.saintsreport.com">Saints Report</a></li>
+								<li><a href="http://www.nfl.com/teams/neworleanssaints/profile?team=NO">Team Profile on NFL.com</a></li>
+								<li><a href="http://www.neworleanssaints.com/team/history/hall-of-fame.html">Saints Hall of Fame Information</a></li>
+							  </ul>
+							</li>
+						  </ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</div>
+		</header>
+			<table class="table-hover table-bordered container col-sm-3">
 				<thead>
 					<tr>
 						<th>Passing Stats</th>
@@ -68,8 +105,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<br>
-			<table class="table-hover table-bordered">
+			<table class="table-hover table-bordered container col-sm-3 ">
 				<thead>
 					<tr>
 						<th>Rushing Stats</th>
@@ -120,5 +156,212 @@
 					</tr>
 				</tbody>
 			</table>
+			<table class="table-hover table-bordered container col-sm-3">
+				<thead>
+					<tr>
+						<th>Receiving Stats</th>
+					</tr>
+					<tr>
+						<th>Player Name</th>
+						<th>Team</th>
+						<th>Receiving Yards</td>
+						<th>Receiving Touchdowns</th>
+						<th>Fumbles</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1. Julio Jones</td>
+						<td>ATL</td>
+						<td>552</td>
+						<td>3</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>2. Jordy Nelson</td>
+						<td>GB</td>
+						<td>525</td>
+						<td>4</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>3. Antonio Brown</td>
+						<td>PIT</td>
+						<td>511</td>
+						<td>5</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>4. Steve Smith</td>
+						<td>BAL</td>
+						<td>463</td>
+						<td>3</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>5. Golden Tate</td>
+						<td>DET</td>
+						<td>451</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table-hover table-bordered container col-sm-3">
+				<thead>
+					<tr>
+						<th>Passing Stats</th>
+					</tr>
+					<tr>
+						<th>Player Name</th>
+						<th>Team</th>
+						<th>Passing yards</td>
+						<th>Passing Touchdowns</th>
+						<th>Interceptions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1. Andrew Luck</td>
+						<td>IND</td>
+						<td>1305</td>
+						<td>13</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>2. Matt Ryan</td>
+						<td>ATL</td>
+						<td>1263</td>
+						<td>10</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>3. Drew Brees</td>
+						<td>NO</td>
+						<td>1203</td>
+						<td>7</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4. Matthew Stafford</td>
+						<td>DET</td>
+						<td>1176</td>
+						<td>5</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>5. Nick Foles</td>
+						<td>PHI</td>
+						<td>1173</td>
+						<td>6</td>
+						<td>4</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table-hover table-bordered container col-sm-3">
+				<thead>
+					<tr>
+						<th>Passing Stats</th>
+					</tr>
+					<tr>
+						<th>Player Name</th>
+						<th>Team</th>
+						<th>Passing yards</td>
+						<th>Passing Touchdowns</th>
+						<th>Interceptions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1. Andrew Luck</td>
+						<td>IND</td>
+						<td>1305</td>
+						<td>13</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>2. Matt Ryan</td>
+						<td>ATL</td>
+						<td>1263</td>
+						<td>10</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>3. Drew Brees</td>
+						<td>NO</td>
+						<td>1203</td>
+						<td>7</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4. Matthew Stafford</td>
+						<td>DET</td>
+						<td>1176</td>
+						<td>5</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>5. Nick Foles</td>
+						<td>PHI</td>
+						<td>1173</td>
+						<td>6</td>
+						<td>4</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table-hover table-bordered container col-sm-3">
+				<thead>
+					<tr>
+						<th>Passing Stats</th>
+					</tr>
+					<tr>
+						<th>Player Name</th>
+						<th>Team</th>
+						<th>Passing yards</td>
+						<th>Passing Touchdowns</th>
+						<th>Interceptions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1. Andrew Luck</td>
+						<td>IND</td>
+						<td>1305</td>
+						<td>13</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>2. Matt Ryan</td>
+						<td>ATL</td>
+						<td>1263</td>
+						<td>10</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>3. Drew Brees</td>
+						<td>NO</td>
+						<td>1203</td>
+						<td>7</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4. Matthew Stafford</td>
+						<td>DET</td>
+						<td>1176</td>
+						<td>5</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>5. Nick Foles</td>
+						<td>PHI</td>
+						<td>1173</td>
+						<td>6</td>
+						<td>4</td>
+					</tr>
+				</tbody>
+			</table>
+			<script src="jquery-2.1.1.js"></script>
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		</body>
 </html>

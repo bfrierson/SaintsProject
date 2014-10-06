@@ -1,0 +1,20 @@
+.darkBG {
+	background: #999;
+}
+.darkerBG {
+	background: #666;
+}
+.darkestBG {
+	background: #333;
+}
+.make-row(@gutter: @grid-gutter-width) {
+  // Then clear the floated columns
+  .clearfix();
+
+  @media (min-width: @screen-sm-min) {
+    margin-left:  (@gutter / -2);
+    margin-right: (@gutter / -2);
+  }
+ .testme {
+	margin-left: 30px;
+}

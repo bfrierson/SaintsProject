@@ -1,29 +1,136 @@
 <!doctype html>
 <html>
-	
 	<head>
 		<title>Saints Information Page</title>
+		<link rel="stylesheet" href="main.css">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	</head>
-	
 	<body>
-		<button type="button" class="btn btn-warning btn-lg"><a href="index.html">Home</a></button>
-		<button type="button" class="btn btn-warning btn-lg"><a href="stats.html">Statistics</button>
-		<button type="button" class="btn btn-warning btn-lg"><a href="schedule.html">Schedule</button>
-		<button type="button" class="btn btn-warning btn-lg"><a href="hof.html">Hall of Fame</button>
-		<ul>
+		<header class="navbar-inverse" role="banner">
+			<div class="container">
+				<nav role="navigation">
+					<div class="container-fluid">
+					  <!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						  <a class="navbar-brand" href="index.html">Saints Information Page</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="stats.html">Stats</a></li>
+								<li><a href="schedule.html">Schedule</a></li>
+								<li><a href="hof.html">Hall of Fame</a></li>
+							</ul>
+						  <form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+							  <input type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-default">Submit</button>
+						  </form>
+						  <ul class="nav navbar-nav navbar-right">
+							<li><a href="#">Link</a></li>
+							<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Saints Links<span class="caret"></span></a>
+							  <ul class="dropdown-menu" role="menu">
+								<li><a href="http://www.neworleanssaints.com">New Orleans Saints Home Page</a></li>
+								<li><a href="http://www.saintsreport.com">Saints Report</a></li>
+								<li><a href="http://www.nfl.com/teams/neworleanssaints/profile?team=NO">Team Profile on NFL.com</a></li>
+								<li><a href="http://www.neworleanssaints.com/team/history/hall-of-fame.html">Saints Hall of Fame Information</a></li>
+							  </ul>
+							</li>
+						  </ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</div>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-xs-12">
+					<div class="panel panel-default" id="pnl1">
+						<div class="panel-heading">Top1</div>
+						<div class="panel-body">Basic panel example</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-12">
+					<div class="panel panel-default" id="pnl2">
+						<div class="panel-heading">Top2</div>
+						<div class="panel-body">Basic panel example</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-12">
+					<div class="panel panel-default" id="pnl3">
+						<div class="panel-heading">Top3</div>
+						<div class="panel-body">Basic panel example</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-12">
+					<div class="panel panel-default" id="pnl4">
+						<div class="panel-heading">Top4</div>
+						<div class="panel-body">Basic panel example</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<a href="index.html" class="btn btn-primary">Home</a>
+			<a href="stats.html" class="btn btn-primary">Statistics</a>
+			<a href="schedule.html" class="btn btn-primary">Schedule</a>
+			<a href="hof.html" class="btn btn-primary">Hall of Fame</a>
+		</div>
+		<div class="container">
+			<h1>These buttons have actions</h1>
+			<button id="btn1">Toggle</button>
+			<button id="btn2">Fade Toggle</button>
+			<button id="btn3">Change text</button>
+			<button id="btn4">Hover Out, click in</button>
+			
+		<ul class="container">
 			<li><a href="index.html">Home</a></li>
 			<li><a href="stats.html">Statistics</a></li>
 			<li><a href="schedule.html">Schedule</a></li>
 			<li><a href="hof.html">Hall Of Fame</a></li>
 		</ul>
+		<script src="jquery-2.1.1.js"></script>
+		
+		<script>
+			$(function() {
+			
+				$("#btn1").on('click', function() {
+					$('#pnl1').toggle();
+				});
+			
+				$("#btn2").on('click', function() {
+					$('#pnl2').fadeToggle(200);
+				});
+			
+				$("#btn3").on('click', function() {
+					$('#pnl3 .panel-body').html('CHANGED BRO');
+				});
+			
+				$("#btn4").on('mouseover', function() {
+					$('#pnl4').fadeOut(200);
+				});
+				$("#btn4").on('click', function() {
+					$('#pnl4').fadeIn(200);
+				});
+			});
+			
+		</script>
+			
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
 	</body>
 	
 </html>
