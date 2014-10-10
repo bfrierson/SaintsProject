@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>canopy</id>
+    <version>0.9.16</version>
+    <authors>Chris Holt</authors>
+    <owners>Chris Holt</owners>
+    <licenseUrl>https://github.com/lefthandedgoat/canopy/blob/master/license.txt</licenseUrl>
+    <projectUrl>http://lefthandedgoat.github.com/canopy</projectUrl>
+    <iconUrl>http://lefthandedgoat.github.io/canopy/canopy_orig.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple framework in F# on top of selenium for writing UI automation and tests.</description>
+    <releaseNotes>Updated to latest Selenium 2.43.1
+Made path for failed screen shots mutable.  Thanks soerennielsen! [Pull Request #168](https://github.com/lefthandedgoat/canopy/pull/168)</releaseNotes>
+    <tags>f# fsharp canopy selenium ui automation tests</tags>
+    <dependencies>
+      <dependency id="Selenium.WebDriver" version="[2.43.1]" />
+      <dependency id="Selenium.Support" version="[2.43.1]" />
+      <dependency id="SizSelCsZzz" version="[0.3.36.0]" />
+    </dependencies>
+    <references>
+      <reference file="canopy.dll" />
+    </references>
+  </metadata>
+</package>
