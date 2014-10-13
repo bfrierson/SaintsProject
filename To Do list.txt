@@ -1,0 +1,24 @@
+To Do
+1. Add alert column to drew	---DONE
+
+
+
+REQ DATA
+1. Buttons                                                    ---DONE
+2. Alerts. - On Stats Page.                                   ---DONE
+3. Checkboxes checked/unchecked
+4. Radios buttons
+5. Multi selects
+6. Table rows (using xpath)                                   ---DONE
+7. Dropdowns
+8. CSS (id, class, tag, child, attr, etc...)
+9. Xpath (parents, text, children, class, id, )
+10. Finders (text, list)
+11. List (ul, ol)
+12. Ajax
+13. search work
+14. modals
+15. displayed/ not displayed                                  ---DONE
+16. links to new pages.and verify your on the page            ---DONE
+17. Count
+18. *=
