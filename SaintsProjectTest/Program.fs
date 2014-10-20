@@ -24,6 +24,7 @@ let radioArchie = "#radio4"
 let modalName = "#contact-name"
 let modalEmail = "#contact-email"
 let modalText = "#contact-text"
+let navBar = ".nav.navbar-nav li a"
 
 
 //Helpers
@@ -96,6 +97,8 @@ start chrome
     saintsList *= "Khiry Robinson"
     saintsList *= "Marques Colston"
 
+    count saintsList 6
+
 "If you set drop to a name does it stay?" &&& fun _ ->
     saintsDropdown << "Drew Brees"
     saintsDropdown == "Drew Brees"
@@ -149,17 +152,22 @@ start chrome
 
 //Checkboxes
 "Check the check boxes" &&& fun _ ->
-    check ("#db9")
-    check ("#coach")
-    check ("#refs")
+    check "#db9"
+    check "#coach"
+    check "#refs"
     
-    uncheck ("#db9")
-    uncheck ("#coach")
-    uncheck ("#refs")
+    uncheck "#db9"
+    uncheck "#coach"
+    uncheck "#refs"
 
+"Check NavBar for links" &&& fun _ ->
+    navBar *= "Stats"
+    navBar *= "Schedule"
+    navBar *= "Hall of Fame"
+    navBar *= "Fun Page"
+    navBar *= "Saints Links"
 
-"" &&& fun _ ->
-    ()
+    count navBar 9 
 
 run()
 System.Console.ReadKey()

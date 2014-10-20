@@ -6,19 +6,19 @@ To Do
 REQ DATA
 1. Buttons                                                    ---DONE
 2. Alerts. - On Stats Page.                                   ---DONE
-3. Checkboxes checked/unchecked
+3. Checkboxes checked/unchecked								  ---DONE
 4. Radios buttons											  ---DONE
 5. Multi selects
 6. Table rows (using xpath)                                   ---DONE
 7. Dropdowns												  ---DONE
 8. CSS (id, class, tag, child, attr, etc...)
 9. Xpath (parents, text, children, class, id, )
-10. Finders (text, list)
-11. List (ul, ol)
-12. Ajax
-13. search work
+10. Finders (text, list) https://github.com/lefthandedgoat/canopy/blob/master/src/canopy/finders.fs LINE 60
+11. List (ul, ol)											  ---DONE
+12. Ajax -DONT WORRY										  ---SKIP
+13. search work												  ---SKIP
 14. modals													  ---DONE
 15. displayed/ not displayed                                  ---DONE
 16. links to new pages.and verify your on the page            ---DONE
-17. Count
-18. *=
+17. Count                                                     ---DONE
+18. *=  add links from navbar								  ---DONE

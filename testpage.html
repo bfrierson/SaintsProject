@@ -2,12 +2,14 @@
 <html>
 	<head>
 		<title>Crazy Test Page</title>
-		<link rel="stylesheet" href="main.css">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		
+		<!-- My CSS -->
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
 		<header class="navbar-inverse navbar-fixed-top"  role="banner">
@@ -198,7 +200,27 @@
 		<div class="col-md-4"></div>
 	</div>	
 	
-		
+	<div class="container">
+			<div class="col-lg-3"></div>
+			<h3>Multiple Select</h3>
+					<select class="select2" id="mySel3" style="width: 400px;" multiple="multiple">
+						<div class="col-lg-6">
+						<optgroup label="Select multiple">
+							<option>One</option>
+							<option>Two</option>
+							<option>Three</option>
+							<option>Six</option>
+							<option>Seven</option>
+							<option>Nine</option>
+						</optgroup>
+						<optgroup class="single" label="Select one">
+							<option>Four</option>
+							<option>Five</option>
+							<option>LALALA</option>
+						</optgroup>
+					</select>
+				</div>
+	</div>
 		
 	<script src="jquery-2.1.1.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
