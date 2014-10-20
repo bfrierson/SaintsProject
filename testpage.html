@@ -100,37 +100,23 @@
 				<option value="">Select</option>
 				<option value="1">Drew Brees</option>
 				<option value="2">Mark Ingram</option>
-				<option value="4">Pierre Thomas</option>
-				<option value="5">Khiry Robinson</option>
-				<option value="6">Tavaris Cadet</option>
-				<option value="8">Austin Johnson</option>
-				<option value="9">Jimmy Grahamn</option>
-				<option value="10">Ben Watson</option>
-				<option value="11">Josh Hill</option>
-				<option value="12">Brandin Cooks</option>
-				<option value="13">Marques Colston</option>
-				<option value="15">Kenny Stills</option>
-				<option value="16">Robert Meachem</option>
-				<option value="17">Nick Toon</option>
+				<option value="3">Pierre Thomas</option>
+				<option value="4">Khiry Robinson</option>
+				<option value="5">Marques Colston</option>
 				</select>
 			</div>
 		<div class="col-lg-5"></div>
 	</div>
 		
 	<br>
-		
-	<div class="container pull-right">
-		<a href="#suggest" class="btn btn-primary" data-toggle="modal">Suggestions</a>
+	
+	
+	<div class="container-fluid">
+		<div class="col-md-4"></div>
+			<a href="#suggest" class="btn btn-primary" data-toggle="modal">Suggestions</a>
+			<a href="#contact" class="btn btn-primary" data-toggle="modal">Contact Me</a>
 	</div>
 	
-	<br><br>
-		
-	<div class="container pull-right">
-		<a href="#contact" class="btn btn-primary" data-toggle="modal">Contact Me</a>
-	</div>
-	
-	
-		
 	<div class="modal fade" id="suggest" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -171,7 +157,7 @@
 						<div class="form-group">
 							<label for="contact-msg" class="col-lg-2 control=label">Message:</label>
 								<div class="col-lg-10">
-									<textarea class="form-control" rows="7" placeholder="Message"></textarea>
+									<textarea class="form-control" rows="7"  id="contact-text" placeholder="Message"></textarea>
 								</div>
 						</div>
 					</div>
@@ -183,7 +169,34 @@
 			</div>
 		</div>
 	</div>
-		
+	<br>
+	<br>
+	<br>
+	<div class="container-fluid">
+		<div class="col-md-4"></div>
+		<div class="panel panel-warning col-md-3">
+			<div class="panel-heading">Who's Fault is it, that the Saints Lost to Detroit???</div>
+			<div class="panel-body">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="" id="db9">Drew Brees</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="" id="coach">Sean Payton</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="" id="refs">The Refs</label>
+				</div>
+				<div class="checkbox disabled">
+					<label>
+						<input type="checkbox" value="" disabled id="disabled">Disabled Option</label>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4"></div>
+	</div>	
 	
 		
 		

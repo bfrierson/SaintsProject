@@ -15,6 +15,15 @@ let searchBar = "#searchBar"
 let inputSuccess = "#inputSuccess2"
 let inputWarning = "#inputWarning2"
 let inputError = "#inputError2"
+let saintsList = "#saints option"
+let saintsDropdown = "#saints"
+let radioDrew = "#radio1"
+let radioDuece = "#radio2"
+let radioRicky = "#radio3"
+let radioArchie = "#radio4"
+let modalName = "#contact-name"
+let modalEmail = "#contact-email"
+let modalText = "#contact-text"
 
 
 //Helpers
@@ -78,13 +87,79 @@ start chrome
     click changeText
     panelText == "Marques Colston"
 
-"Saints link dropdown, verfiy it contains 4 sites" &&& fun _ ->
-    ()
+//   DROPDOWN TEST
+"Verify Saints player dropdown has certain options" &&& fun _ ->
+    click "Fun Page"
+    saintsList *= "Drew Brees"
+    saintsList *= "Mark Ingram"
+    saintsList *= "Pierre Thomas"
+    saintsList *= "Khiry Robinson"
+    saintsList *= "Marques Colston"
 
-
+"If you set drop to a name does it stay?" &&& fun _ ->
+    saintsDropdown << "Drew Brees"
+    saintsDropdown == "Drew Brees"
     
+    saintsDropdown << "Mark Ingram"
+    saintsDropdown == "Mark Ingram"
+    
+    saintsDropdown << "Pierre Thomas"
+    saintsDropdown == "Pierre Thomas"
+   
+    saintsDropdown << "Khiry Robinson"
+    saintsDropdown == "Khiry Robinson"
+   
+    saintsDropdown << "Marques Colston"
+    saintsDropdown == "Marques Colston"
+
+//    Radio Buttons
+"Can I select the radios buttons, verfiy they are selected and others are not" &&& fun _ ->
+    click radioDrew
+    selected radioDrew
+    deselected radioDuece
+
+    click radioDuece
+    selected radioDuece
+    deselected radioRicky
+
+    click radioRicky
+    selected radioRicky
+    deselected radioArchie
+
+    click radioArchie
+    selected radioArchie
+    deselected radioDrew
+
+// Modals
+"click modal, verify it pops up" &&& fun _ ->
+    click "Suggestions"
+    displayed "PWNED"
+    click "Close"
+
+"Click contact modal, enter information, verify info" &&& fun _ ->
+    click "Contact Me"
+    modalName << "Hans Gruber"
+    modalEmail << "edge120x@yahoo.com"
+    modalText << "This is random text for a modal."
+    
+    modalName == "Hans Gruber"
+    modalEmail == "edge120x@yahoo.com"
+    modalText == "This is random text for a modal."
+    click "Submit"
+
+//Checkboxes
+"Check the check boxes" &&& fun _ ->
+    check ("#db9")
+    check ("#coach")
+    check ("#refs")
+    
+    uncheck ("#db9")
+    uncheck ("#coach")
+    uncheck ("#refs")
 
 
+"" &&& fun _ ->
+    ()
 
 run()
 System.Console.ReadKey()
