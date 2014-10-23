@@ -24,37 +24,49 @@ let radioArchie = "#radio4"
 let modalName = "#contact-name"
 let modalEmail = "#contact-email"
 let modalText = "#contact-text"
+let coach = "#coach"
 let navBar = ".nav.navbar-nav li a"
 
 
 //Helpers
 let yardage name = sprintf "//td[contains(text(), '%s')]/../td[3]" name
+let findAlert name = sprintf "//td[contains(text(), '%s')]/..//a" name
 
 start chrome
 
+//Finding data using an xpath
 "Find Drew Bree passing yards" &&& fun _ ->
-    url "file:///C:/Projects/SaintsProject/index.html"
+    url "file:///C:/Projects/SaintsProject/index.html"              
     click "Stats"
     "//td[contains(text(), 'Drew Brees')]/../td[3]" == "1574"
-
-"Find the Alert on the row with Drew Brees" &&& fun _ ->
-    click "//td[contains(text(), 'Drew Brees')]/..//a"
-    alert() == "WHO DAT!"
-    acceptAlert()
 
 "Find DeMarco Murray rushing yards" &&& fun _ ->
     url "file:///C:/Projects/SaintsProject/index.html"
     click "Stats"
     "//td[contains(text(), 'DeMarco Murray')]/../td[3]" == "670"
 
+//Turning that nasty xpath into a method, much delicious!
+"Find Steve Smiths Rec Yards using function" &&& fun _ ->
+    yardage "Steve Smith" == "463"
+
+//Finding the alert
+"Find the Alert on the row with Drew Brees" &&& fun _ ->
+    click "//td[contains(text(), 'Drew Brees')]/..//a"
+    alert() == "WHO DAT!"
+    acceptAlert()
+
 "Find the Alert on the row with DeMarco Murray" &&& fun _ ->
     click "//td[contains(text(), 'DeMarco Murray')]/..//a"
     alert() == "How bout them Cowboys!"
     acceptAlert()
 
-"Find Steve Smiths Rec Yards using function" &&& fun _ ->
-    yardage "Steve Smith" == "463"
+//Same Deal lets make this easier
+"Make helper to make it easier" &&& fun _ ->
+    click <| findAlert "Matt Ryan"
+    alert() == "RISE UP!"
+    acceptAlert()
 
+//Testing if you are on the correct URL
 "Testing clicking on links by text, IDs, then verifing you are on correct page" &&& fun _ ->
     click "Schedule"
     on schedulePage
@@ -65,11 +77,18 @@ start chrome
     click home
     on homePage
 
+//Click some buttons
 "Check Panel is displayed, click toggle button, and verify it is now gone." &&& fun _ ->
     displayed panelGone
     click toggle
     notDisplayed panelGone
 
+"Click the button to change the text , verify" &&& fun _ ->
+    panelText == "Eric Martin"
+    click changeText
+    panelText == "Marques Colston"
+
+//Enter some text, verify its there
 "Can enter text into search, and other inputs, verify" &&& fun _ ->
     searchBar << "Drew Brees"
     searchBar == "Drew Brees"
@@ -83,14 +102,10 @@ start chrome
     inputError << "Cam Jordan"
     inputError == "Cam Jordan"
 
-"Click the button to change the text , verify" &&& fun _ ->
-    panelText == "Eric Martin"
-    click changeText
-    panelText == "Marques Colston"
-
-//   DROPDOWN TEST
+//     DROPDOWN TEST
 "Verify Saints player dropdown has certain options" &&& fun _ ->
     click "Fun Page"
+    saintsList *= "Select"
     saintsList *= "Drew Brees"
     saintsList *= "Mark Ingram"
     saintsList *= "Pierre Thomas"
@@ -152,20 +167,31 @@ start chrome
 
 //Checkboxes
 "Check the check boxes" &&& fun _ ->
-    check "#db9"
-    check "#coach"
-    check "#refs"
-    
-    uncheck "#db9"
-    uncheck "#coach"
-    uncheck "#refs"
+    check "#db9"                                //Check the check box using CSS to find the it
+    selected "#db9"
 
-"Check NavBar for links" &&& fun _ ->
+    check coach                                 //Check the check box using a value to find the it
+    selected coach
+
+    click "The Refs"                            //Click the check box using Text to find the it ***Changed check to click as your click the text
+    selected "#refs"                            //Have to use ID when verifing it was checked
+    
+    uncheck "#db9"                              //Uncheck the check box using CSS to find the it
+    deselected "#db9"
+    
+    uncheck coach                               //Uncheck the check box using a varible to find the it
+    deselected coach
+
+    click "The Refs"                            //Click the check box using Text to find the it ***Changed uncheck to click as your click the text
+    deselected "#refs"                          //Have to use ID when verifing it was unchecked
+
+"Check NavBar for links, do a count on total links" &&& fun _ ->
     navBar *= "Stats"
     navBar *= "Schedule"
     navBar *= "Hall of Fame"
     navBar *= "Fun Page"
     navBar *= "Saints Links"
+    navBar *= "New Orleans Saints Home Page"
 
     count navBar 9 
 
